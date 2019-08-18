@@ -1,0 +1,8 @@
+COUNT REVERT
+<h1>There are {{ list }} number of words in your sentence.</h1>
+<h2>Your text: </h2>
+<a href = "{% url 'home' %}">go back </a>
+<br><br>
+{% for word, totalcount in wordcount %}
+{{ word }}::{{ totalcount }}<br>
+{% endfor %}
